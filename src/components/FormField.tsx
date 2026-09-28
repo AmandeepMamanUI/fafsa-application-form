@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import type { ReactNode } from "react";
 
 interface FormFieldProps {
   id: string;
@@ -9,15 +9,35 @@ interface FormFieldProps {
   children: ReactNode;
 }
 
-export function FormField({ id, label, error, required, hint, children }: FormFieldProps) {
+export function FormField({
+  id,
+  label,
+  error,
+  required,
+  hint,
+  children,
+}: FormFieldProps) {
   return (
-    <div className={`form-field ${error ? 'form-field--error' : ''}`}>
+    <div className={`form-field ${error ? "form-field--error" : ""}`}>
       <label htmlFor={id}>
-        {label} {required && <span className="required" aria-hidden="true">*</span>}
+        {label}{" "}
+        {required && (
+          <span className="required" aria-hidden="true">
+            *
+          </span>
+        )}
       </label>
-      {hint && <p className="field-hint" id={`${id}-hint`}>{hint}</p>}
+      {hint && (
+        <p className="field-hint" id={`${id}-hint`}>
+          {hint}
+        </p>
+      )}
       {children}
-      {error && <p className="field-error" id={`${id}-error`} role="alert">{error}</p>}
+      {error && (
+        <p className="field-error" id={`${id}-error`} role="alert">
+          {error}
+        </p>
+      )}
     </div>
   );
 }
