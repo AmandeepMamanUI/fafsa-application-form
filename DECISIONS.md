@@ -181,15 +181,18 @@ The intended manual keyboard test is:
 - verify focus moves to the error summary after an invalid submission;
 - verify error-summary links move focus to the appropriate field.
 
-### Additional accessibility testing
+## Time Spent
 
-Given more time, I would also test with:
+Approximately 2 hours of implementation time, followed by final build/test verification.
 
-- axe DevTools;
-- Lighthouse accessibility audit;
-- WAVE;
-- NVDA on Windows;
-- multiple browsers and zoom levels.
+## Accessibility Testing Performed
+
+I manually tested keyboard navigation using Tab, Shift+Tab, arrow keys,
+Space, and Enter. I verified focus order, native radio-group behavior,
+validation messaging, and focus movement to the error summary.
+
+Due to the exercise time limit, I did not complete a full NVDA, axe,
+WAVE, or Lighthouse audit.
 
 ## Form Submission
 

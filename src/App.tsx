@@ -207,7 +207,7 @@ export default function App() {
         {submitted && (
           <div className="success-message" role="status" tabIndex={-1}>
             <h2>Application ready to submit</h2>
-            <p>All required information passed validation.</p>
+            <p>All required information has been entered successfully.</p>
           </div>
         )}
 
